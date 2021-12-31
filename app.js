@@ -4,6 +4,7 @@ const adding = $(".addTask span");
 const cancel = $("#cancel");
 const nextStep = $("#next");
 const showCountDown = $("#timeCountDown");
+const welcome = $("#welcome");
 
 addPlayers.hide();
 adding.hide();
@@ -14,6 +15,7 @@ const jugadores = [];
 
 $("#Addbtn").on("click", () => {
   $(".addTask").fadeIn();
+  $("#welcome").fadeOut();
 });
 
 $("#addPlayer").on("click", () => {
@@ -31,6 +33,7 @@ cancel.on("click", () => {
   for (let i = jugadores.length; i > 0; i--) {
     jugadores.pop();
   }
+  $("#welcome").fadeIn();
 });
 
 nextStep.on("click", () => {
